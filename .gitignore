@@ -1,0 +1,36 @@
+# Node.js
+node_modules/       # Dependency directory for Node.js
+npm-debug.log       # npm debug log
+yarn-error.log      # Yarn error log
+
+# Python
+__pycache__/        # Python bytecode cache
+*.pyc               # Python compiled files
+
+# Java
+*.class             # Java class files
+
+# macOS
+.DS_Store           # macOS Finder settings
+
+# Windows
+Thumbs.db           # Windows image file cache
+desktop.ini         # Windows desktop configuration
+
+# IDEs and editors
+.vscode/            # VS Code settings
+.idea/              # JetBrains IDE settings
+*.sublime-workspace # Sublime Text workspace files
+
+# Logs and temporary files
+*.log               # Log files
+*.tmp               # Temporary files
+*.swp               # Swap files from editors like Vim
+
+# Build directories
+build/              # Build directory
+dist/               # Distribution directory
+out/                # Output directory
+
+# Environment files
+.env                # Ignore .env file containing sensitive data
