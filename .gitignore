@@ -1,36 +1,76 @@
+# Sistema Operacional
+# Ignora arquivos do macOS
+.DS_Store
+
+# Ignora arquivos do Windows
+Thumbs.db
+ehthumbs.db
+
+# Editor de Texto
+# Ignora arquivos de configuração do editor VSCode
+.vscode/
+
+# Ignora arquivos de configuração do IntelliJ IDEA
+.idea/
+
+# Ignora arquivos temporários do Sublime Text
+.sublime-workspace
+.sublime-project
+
+# Ignora arquivos temporários do Vim
+*.swp
+
+# Ignora arquivos temporários do Emacs
+*~
+.#*
+
 # Node.js
-node_modules/       # Dependency directory for Node.js
-npm-debug.log       # npm debug log
-yarn-error.log      # Yarn error log
+# Ignora dependências do Node.js
+node_modules/
+
+# Ignora arquivos de lock do npm (em alguns casos você pode querer manter o package-lock.json)
+package-lock.json
+yarn.lock
 
 # Python
-__pycache__/        # Python bytecode cache
-*.pyc               # Python compiled files
+# Ignora arquivos do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+
+# Ambiente virtual do Python
+*.env
+*.venv
 
 # Java
-*.class             # Java class files
+# Ignora arquivos do Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
 
-# macOS
-.DS_Store           # macOS Finder settings
+# Outros
+# Ignora arquivos temporários de backup
+*~ 
+*.bak
+*.tmp
 
-# Windows
-Thumbs.db           # Windows image file cache
-desktop.ini         # Windows desktop configuration
+# Ignora arquivos de log
+*.log
 
-# IDEs and editors
-.vscode/            # VS Code settings
-.idea/              # JetBrains IDE settings
-*.sublime-workspace # Sublime Text workspace files
+# Ignora arquivos de banco de dados SQLite
+*.sqlite
+*.sqlite3
 
-# Logs and temporary files
-*.log               # Log files
-*.tmp               # Temporary files
-*.swp               # Swap files from editors like Vim
+# Ignora arquivos de configuração do sistema
+*.sublime-*
+*.idea
 
-# Build directories
-build/              # Build directory
-dist/               # Distribution directory
-out/                # Output directory
-
-# Environment files
-.env                # Ignore .env file containing sensitive data
+# Ignora o arquivo .env (já discutido)
+.env
