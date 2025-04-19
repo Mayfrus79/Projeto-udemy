@@ -5,9 +5,9 @@ import requests
 url = 'https://www.tecmundo.com.br/?ab=true&'
 response = requests.get(url)
  
-print(response.status_code)
- # print(response.headers)
- # print(response.content)
- # print(response.json())
+# print(response.status_code)
+# print(response.headers)
+# print(response.content)
+# print(response.json())
+# print(response.headers)
 print(response.text)
-print(response.headers)
