@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://jsonplaceholder.typicode.com/users'
+url = 'https://www.websiteplanet.com/pt-br/'
 
 # Send a GET request to the API
 response = requests.get(url)
