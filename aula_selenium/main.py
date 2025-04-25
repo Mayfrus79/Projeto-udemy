@@ -15,7 +15,5 @@ search_box.send_keys("The beginning after the end")  # Altere para o que você q
 search_box.send_keys(Keys.RETURN)     # Pressiona Enter para buscar
 
 
-
-
 # Aguarda resultados
 time.sleep(500)
