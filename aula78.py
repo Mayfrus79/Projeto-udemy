@@ -1,24 +1,35 @@
 import subprocess
 
-car_script = '''
-set /p car=Enter car name: 
-echo Car %car% registered successfully!
-echo Warning: This is a demo warning 1>&2
-'''
+folders = [
+    "C:\\Windows\\Temp",
+    "C:\\Users\\larti\\AppData\\Local\\Temp",
+    "C:\\Windows\\Prefetch"
+]
 
-result = subprocess.run(
-    car_script,
-    input='Mustang\n',
-    capture_output=True,
-    text=True,
-    shell=True  # Removido executable
-)
+print("Deleting folders (if they exist):\n")
 
-print("✅ STDOUT (Output):")
-print(result.stdout)
+for folder in folders:
+    result = subprocess.run(f'rmdir /s /q "{folder}"',
+                            capture_output=True,
+                            text=True,
+                            shell=True)
+    
+    print(f"Folder: {folder}")
+    print("STDOUT:", result.stdout if result.stdout else "(no output)")
+    print("STDERR:", result.stderr if result.stderr else "(no errors)")
+    print("-" * 40)
 
-print("⚠️ STDERR (Errors):")
-print(result.stderr)
+# Run system file checker
+print("\nRunning System File Checker (sfc /scannow)...\n")
 
-print("📦 EXIT CODE:")
-print(result.returncode)
+scan = subprocess.run("sfc /scannow",
+                      capture_output=True,
+                      text=True,
+                      shell=True)
+
+print("Scan completed:\n")
+print(scan.stdout)
+
+if scan.stderr:
+    print("Errors during scan:\n")
+    print(scan.stderr)
