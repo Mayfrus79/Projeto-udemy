@@ -6,7 +6,6 @@ parking = deque(maxlen=4)
 
 parking.append({"Plate": "AAA111", "Model": "Corsa", "Color": "Gray"})
 parking.append({"Plate": "BBB222", "Model": "Palio", "Color": "Red"})
-parking.appendleft({"Plate": "EEE555", "Model": "Onix", "Color": "Green"})
 parking.append({"Plate": "CCC333", "Model": "Gol", "Color": "Black"})
 parking.appendleft({"Plate": "DDD444", "Model": "Fox", "Color": "White"})
 
