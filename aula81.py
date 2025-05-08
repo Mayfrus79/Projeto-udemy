@@ -9,7 +9,7 @@ parking.append({"Plate": "BBB222", "Model": "Palio", "Color": "Red"})
 parking.append({"Plate": "CCC333", "Model": "Gol", "Color": "Black"})
 parking.appendleft({"Plate": "DDD444", "Model": "Fox", "Color": "White"})
 
-folder_path = Path.home() / "Desktop" / "Json_folder"
+folder_path = Path(__file__).parent / "Json_folder"
 folder_path.mkdir(exist_ok=True)
 JSON_FILE = folder_path / "Json_file.json"
 
