@@ -1,8 +1,5 @@
 import enum
 
-def eat(fruit):
-    print(f'Eating {fruit}')
-
 # Creating the Enum for fruits
 class Fruits(enum.Enum):
     APPLE = enum.auto()
@@ -10,16 +7,18 @@ class Fruits(enum.Enum):
     ORANGE = enum.auto()
     GRAPE = enum.auto()
 
-# Displaying information about the fruits
-print(Fruits(1), Fruits['APPLE'], Fruits.APPLE)
-print(Fruits(1).name, Fruits.APPLE.value)
-
 # Function that accepts an object of type Fruits
 def eat(fruit: Fruits):
     if not isinstance(fruit, Fruits):
         raise ValueError('Fruit not found')
+    print(f'Eating {fruit.name} (value: {fruit.value})')
 
-    print(f'Eating {fruit.name} ({fruit.value})')
+# Displaying information about the fruits
+print(Fruits(1))               # Fruits.APPLE
+print(Fruits['APPLE'])        # Fruits.APPLE
+print(Fruits.APPLE)           # Fruits.APPLE
+print(Fruits(1).name)         # APPLE
+print(Fruits.APPLE.value)     # 1
 
 # Using the fruits
 eat(Fruits.APPLE)
